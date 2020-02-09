@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Animated, } from 'react-native';
-import Layout from "./logComp/layout";
+import Layout from "./layout";
 
 export default FadeInView = (props) => {
   const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -22,7 +22,11 @@ export default FadeInView = (props) => {
         opacity: fadeAnim,         // Bind opacity to animated value
       }}
     >
-     <Layout title={props.title}/>
+     <Layout
+     onInputChange={props.onInputChange}
+      title={props.title}
+        btn={props.btn}
+      />
     </Animated.View>
   );
 }

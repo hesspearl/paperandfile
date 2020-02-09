@@ -1,6 +1,5 @@
 import React, { useReducer, useEffect , useCallback } from "react";
 import { Text, View, StyleSheet } from "react-native";
-
 import InputTxt from "../components/Inputs";
 
 
@@ -138,6 +137,11 @@ const styles = StyleSheet.create({
   input: {
     width: 350,
     height: 70,
+    fontSize:24,
+   // fontWeight:"bold",
+    color:"white",
+    fontFamily:"anton",
+    padding:10
    
 
   }

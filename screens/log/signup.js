@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import { View, ImageBackground, StyleSheet, Text,TouchableOpacity } from "react-native";
 import Fade from "../../components/logComp/Fade"
 import Colors from "../../styles/Colors"
+import Inputs from "../../components/components/Inputs"
 
 
-const Login = props => {
+const Signup = props => {
   const [inputs, setInputs] = useState();
 
   return (
@@ -13,22 +14,14 @@ const Login = props => {
       source={require("../../assets/splashJS.png")}
     blurRadius={3}
     >
+    <Inputs/>
   
       <Fade
      onInputChange={setInputs}
-     title="تسجيل الدخول"
+     title="انشاء حساب"
       style={styles.contain}
-      btn="دخول" />
-      <TouchableOpacity
-      onPress={()=>props.navigation.navigate("signup")}>
-      <View
-      style={styles.txtView}>
-      <Text
-      style = {styles.text}>
-        لا تملك حساب؟
-      </Text>
-      </View>
-      </TouchableOpacity>
+      btn="ارسال" />
+      
     </ImageBackground>
   );
 };
@@ -53,4 +46,4 @@ const styles = StyleSheet.create({
  
   }
 });
-export default Login;
+export default Signup;

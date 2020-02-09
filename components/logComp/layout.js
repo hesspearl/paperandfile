@@ -2,12 +2,18 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import LogInput from "../logComp/inputs"
 import Colors from "../../styles/Colors";
+import Logbtn from "../logComp/logBtn"
 
 const Layout = props => {
   return (
     <View style={{ ...styles.logStyle, ...props.style }}>
       <Text style={styles.Title}>{props.title} </Text>
-      <LogInput/>
+      <LogInput
+        onInputChange={props.onInputChange}
+      />
+      <Logbtn>
+        {props.btn}
+      </Logbtn>
     </View>
   );
 };
@@ -15,7 +21,7 @@ const Layout = props => {
 const styles = StyleSheet.create({
   logStyle: {
     height: "70%",
-    backgroundColor: "rgba(0,0,0,0)",
+    backgroundColor: Colors.trans2,
     alignItems: "center",
 justifyContent:"center",
   //  marginTop: 30,
@@ -34,9 +40,11 @@ justifyContent:"center",
     fontSize: 50,
     fontWeight: "bold",
     fontFamily:"anton",
-    color:"rgba(255,255,255, 0.3)",
-    textShadowRadius:10,
-    textShadowColor:"black"
+    color:Colors.whiteTrans,
+    textShadowRadius:100,
+    textShadowColor:"black",
+  marginBottom:20,
+ 
 
    
     

@@ -5,6 +5,7 @@ import Login from "./screens/log/logIn"
 import picture from "./store/reducer/picture";
 import  * as Font from "expo-font"
 import {AppLoading} from "expo"
+import Nav from "./navigation/nav"
 
 const rootReducer = combineReducers({
   pic: picture
@@ -36,7 +37,7 @@ export default function App() {
     )
   }
   return <Provider store={store}>
-<Login/>
+<Nav/>
   </Provider>;
 }
 
